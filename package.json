@@ -1,0 +1,27 @@
+{
+  "name": "vite-tsconfig-aliases",
+  "version": "0.1.0",
+  "description": "Vite plugin that reads compilerOptions.paths from tsconfig.json and injects them as aliases into Vite resolve.alias config",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dra11y/vite-tsconfig-aliases.git"
+  },
+  "author": "Tom Grushka",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dra11y/vite-tsconfig-aliases/issues"
+  },
+  "homepage": "https://github.com/dra11y/vite-tsconfig-aliases#readme",
+  "devDependencies": {
+    "@types/node": "^22.7.5",
+    "typescript": "^5.6.3"
+  },
+  "dependencies": {
+    "jsonc-parser": "^3.3.1",
+    "vite": "^5.4.8"
+  }
+}
