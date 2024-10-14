@@ -8,19 +8,24 @@
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "default": "./dist/index.js"
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
     }
   },
   "scripts": {
-    "build": "tsc",
+    "dev": "tsc --watch",
+    "build": "tsc --module commonjs && mv dist/index.js dist/index.cjs && tsc",
     "clean": "rm -rf ./node_modules ./dist ./pnpm-lock.yaml ./package-lock.json",
-    "prepare": "npm run build",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prepare": "npm run build"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/dra11y/vite-tsconfig-aliases.git"
-  },
+  "repository": "dra11y/vite-tsconfig-aliases",
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "vite",
+    "vite-plugin"
+  ],
   "author": "Tom Grushka",
   "license": "MIT",
   "bugs": {
@@ -30,9 +35,11 @@
   "dependencies": {
     "jsonc-parser": "^3.3.1"
   },
+  "peerDependencies": {
+    "vite": ">=5.0.0"
+  },
   "devDependencies": {
     "@types/node": "^22.7.5",
-    "typescript": "^5.6.3",
-    "vite": "^5.4.8"
+    "typescript": "^5.6.3"
   }
 }

@@ -1,9 +1,9 @@
 {
-  "include": ["src/**/*"],
+  "include": ["src"],
   "compilerOptions": {
     "target": "ESNext",
     "module": "ESNext",
-    "moduleResolution": "Bundler",
+    "moduleResolution": "Node",
     "outDir": "./dist",
     "declaration": true,
     "esModuleInterop": true,

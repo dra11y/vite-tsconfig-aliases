@@ -1,6 +1,6 @@
 import { resolve } from 'path'
 import { readFileSync } from 'fs'
-import type { Plugin } from 'vite'
+import type { Plugin } from "vite"
 import { parse } from 'jsonc-parser'
 
 interface TSConfig {
@@ -16,8 +16,10 @@ export interface AliasesOptions {
 
 const pluginName: string = 'vite-tsconfig-aliases'
 
-export default function aliases(options?: Partial<AliasesOptions>): Plugin {
-    const { tsconfigPath = 'tsconfig.json' } = { ...options }
+export default function aliases(options: AliasesOptions = {}): Plugin {
+    const {
+        tsconfigPath = 'tsconfig.json',
+    } = options
     return {
         name: pluginName,
         config(_) {
