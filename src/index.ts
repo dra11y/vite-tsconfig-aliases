@@ -1,6 +1,6 @@
 import { resolve } from 'path'
 import { readFileSync } from 'fs'
-import { Plugin } from 'vite'
+import type { Plugin } from 'vite'
 import { parse } from 'jsonc-parser'
 
 interface TSConfig {
